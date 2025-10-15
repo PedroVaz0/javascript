@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Brasiliero ou estrangeiro</h1>
+    <label for="pais">Em que país você nasceu: </label>
+    <input type="text" name="pais" id="pais" /><br />
+    <input type="button" value="Verificar" id="verif" />
+    <div id="res">A</div>
+
+    <script>
+      document.getElementById(`verif`).addEventListener(`click`, verificar);
+
+      function verificar() {
+        var pais = document.getElementById(`pais`).value.trim().toLowerCase();
+        var res = document.getElementById("res");
+
+        res.innerHTML = `<p>Obrigado por usar nosso site!</p>`;
+        if (pais === "brasil") {
+          res.innerHTML += `<p>Você é do Brasil</p>`;
+        } else {
+          res.innerHTML += `<p>Você não é do Brasil</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

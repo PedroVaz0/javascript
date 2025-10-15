@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #caixa {
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contador</h1>
+    <div id="caixa">Clique em mim</div>
+
+    <script>
+      var caixa = document.getElementById("caixa");
+      var contador = 0;
+
+      caixa.addEventListener("click", clicar);
+
+      function clicar() {
+        contador++;
+        caixa.innerHTML = `Você clicou ${contador} vezes`;
+      }
+    </script>
+  </body>
+</html>
